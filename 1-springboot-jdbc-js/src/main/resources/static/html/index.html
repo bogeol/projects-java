@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--    <script src="../js/index.js"></script>-->
+
+    <style>
+        #select {
+            background-color: antiquewhite;
+        }
+
+        #add {
+            background-color: cornflowerblue;
+        }
+
+        #newUser label {
+            display: inline-block;
+            width: 50px;
+        }
+
+    </style>
+
+</head>
+<body>
+
+<header>
+    <div style="display: none">
+        ## 总结
+        - 前端：HTML - CSS - JS
+            - 前端一些基础知识【JS位置：JS放在head中 VS JS放到body末尾（DOM加载完成调用JS）等】
+            - JS的基本语法和数据操作等【JS基础、ES6】
+            - JS的原生操作DOM、绑定事件【相比于**MVVM（Model-ViewModel-View）开发模式**，原生JS太繁琐了】【**Data Bindings + DOM Listeners**】
+                - 原生操作DOM【1. 定位元素 2. DOM API操作 （会有大量重复代码）】
+            - JS使用xhr（XMLHttpRequest）请求【GET POST】【urlencoded / json】【相比于**ajax / axios库**】
+        - 后端：Spring Boot - JDBC
+            - springboot的通用包结构【application.yaml / config -> repository -> service(impl) -> controller】
+            - springboot的配置不熟悉【Java配置 / .yaml】
+            - cors配置不熟悉【WebMvcConfig...】
+            - springboot的注解不熟悉【@...】
+            - springboot的请求响应内部原理不熟悉【@RequestBody @ResponseBody JSON转换 ...】
+            - spring的实际优化不熟悉【Bean】
+            - java基础不熟悉
+            - JDBC操作【Register -> Connection -> Statement -(execute)> ResultSet / int / boolean 】
+            - 服务器部署 / 静态资源分配不熟悉
+        - 数据库：MySQL【MySQL语法记不清了，比如：insert / order by id ASC / ..】
+            - CRUD语法记不清楚了
+            - 其他操作【排序 / ...】
+
+        ## TODO
+        - 针对上面的知识点进行复习、归纳
+        - 针对CRUD：Spring Boot + JDBC + JS -> Spring Boot + MyBatis + Vue.js
+
+        ## 备注
+        - 代码有些地方写的不严谨【只是复习过一波流程】【参考流程就好了】
+    </div>
+</header>
+<main>
+    <div>
+        <h1>user manage</h1>
+
+        <!--        1. select / update / delete-->
+        <hr>
+        <div id="select">
+            <div>
+                <button onclick="selectAll_ul_li()">selectAll_ul_li</button>
+                <button onclick="selectAll_ul_input()">selectAll_ul_input</button>
+            </div>
+            <div id="userList">
+
+            </div>
+        </div>
+
+        <!--        2. add-->
+        <hr>
+        <div id="add">
+            <div>
+                <button onclick="createNewUserDiv()">addNewUser</button>
+            </div>
+            <div id="newUser"></div>
+        </div>
+
+        <!--        3. test-->
+        <hr>
+        <div>
+            <button onclick="random()">random</button>
+            <div id="randomList">
+            </div>
+        </div>
+    </div>
+</main>
+<footer></footer>
+<script src="../js/index.js"></script>
+
+</body>
+</html>
