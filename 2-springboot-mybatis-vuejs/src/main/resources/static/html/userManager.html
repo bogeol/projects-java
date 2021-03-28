@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<link rel="stylesheet" href="../css/elementui/index.css">
+<style>
+    #content > div {
+        margin: 50px 50px;
+    }
+</style>
+<body>
+
+<div id="app">
+    <header></header>
+    <main>
+        <div id="content" style="width: 80%;margin: 0 auto;">
+            <div id="selectAll">
+                <el-card>
+                    <div slot="header" class="clearfix">
+                        <h2>selectAll</h2>
+                    </div>
+                    <el-table
+                            :data="allUser"
+                            style="width: 100%">
+                        <el-table-column
+                                prop="id"
+                                label="id"
+                                width="180">
+                        </el-table-column>
+                        <el-table-column
+                                prop="username"
+                                label="username"
+                                width="180">
+                        </el-table-column>
+                        <el-table-column
+                                prop="password"
+                                label="password"
+                                width="180">
+                        </el-table-column>
+                        <el-table-column
+                                prop="name"
+                                label="name"
+                                width="180">
+                        </el-table-column>
+                        <el-table-column
+                                prop="age"
+                                label="age"
+                                width="180">
+                        </el-table-column>
+                        <el-table-column
+                                prop="phone"
+                                label="phone"
+                                width="180">
+                        </el-table-column>
+                        <el-table-column
+                                prop="email"
+                                label="email"
+                                width="180">
+                        </el-table-column>
+                        <el-table-column
+                                prop="status"
+                                label="status">
+                        </el-table-column>
+                        <el-table-column
+                                prop=""
+                                label="update"
+                                width="80">
+                            <template slot-scope="scope">
+                                <el-button type="primary" icon="el-icon-edit" circle
+                                           @click="updateById(scope.row)"></el-button>
+                            </template>
+                        </el-table-column>
+                        <el-table-column
+                                prop=""
+                                label="delete"
+                                width="80">
+                            <template slot-scope="scope">
+                                <el-button type="danger" icon="el-icon-delete" circle
+                                           @click="deleteById(scope.row)"></el-button>
+                            </template>
+                        </el-table-column>
+
+
+                    </el-table>
+                </el-card>
+            </div>
+            <div id="insert">
+                <el-card>
+                    <div slot="header" class="clearfix">
+                        <h2>insert</h2>
+                    </div>
+
+                    <el-form :model="insertUserForm" status-icon :rules="insertUserRules" ref="insertUserForm"
+                             label-width="100px" style="width: 50%;margin: 0 auto;"
+                    >
+                        <el-form-item label="username" prop="">
+                            <el-input type="text" v-model="insertUserForm.username" autocomplete="off"></el-input>
+                        </el-form-item>
+
+                        <el-form-item label="password" prop="">
+                            <el-input type="password" v-model="insertUserForm.password" autocomplete="off"></el-input>
+                        </el-form-item>
+
+                        <el-form-item label="name" prop="">
+                            <el-input type="text" v-model="insertUserForm.name" autocomplete="off"></el-input>
+                        </el-form-item>
+
+                        <el-form-item label="age" prop="">
+                            <el-input type="text" v-model="insertUserForm.age" autocomplete="off"></el-input>
+                        </el-form-item>
+
+                        <el-form-item label="phone" prop="">
+                            <el-input type="text" v-model="insertUserForm.phone" autocomplete="off"></el-input>
+                        </el-form-item>
+
+                        <el-form-item label="email" prop="">
+                            <el-input type="text" v-model="insertUserForm.email" autocomplete="off"></el-input>
+                        </el-form-item>
+
+                        <el-form-item label="status" prop="">
+                            <el-input type="text" v-model="insertUserForm.status" autocomplete="off"
+                                      disabled></el-input>
+                        </el-form-item>
+
+
+                        <el-form-item>
+                            <el-button type="primary" @click="submitForm('insertUserForm')">提交</el-button>
+                            <el-button @click="resetForm('insertUserForm')">重置</el-button>
+                        </el-form-item>
+                    </el-form>
+                </el-card>
+            </div>
+        </div>
+    </main>
+    <footer></footer>
+</div>
+
+
+<script src="../js/vuejs/vue.js"></script>
+<script src="../js/elementui/index.js"></script>
+<script src="../js/axios/axios.min.js"></script>
+<script src="../js/userManager.js"></script>
+
+</body>
+</html>

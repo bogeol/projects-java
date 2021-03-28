@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.springbootmybatisvuejs.mapper.UserMapper">
+    <insert id="insert" parameterType="com.example.springbootmybatisvuejs.model.User" useGeneratedKeys="true">
+        insert into user(username, password, name, age, phone, email, status)
+        values (#{user.username}, #{user.password}, #{user.name}, #{user.age}, #{user.phone}, #{user.email},
+                #{user.status})
+    </insert>
+
+    <delete id="delete">
+        delete
+        from user
+        where id = #{id}
+    </delete>
+
+    <select id="selectAll" resultType="com.example.springbootmybatisvuejs.model.User">
+        select *
+        from user
+    </select>
+</mapper>
