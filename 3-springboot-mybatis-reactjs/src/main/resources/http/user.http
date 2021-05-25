@@ -1,0 +1,72 @@
+### allUser
+GET http://localhost:10000/user
+Accept: application/json
+
+### user1
+POST http://localhost:10000/user
+Content-Type: application/json
+
+{
+  "username": "zhangsan",
+  "password": "123456",
+  "email": "zhangsan@spring.io",
+  "sex": "man",
+  "age": 20,
+  "status": "normal"
+}
+
+### user2
+POST http://localhost:10000/user
+Content-Type: application/json
+
+{
+  "username": "lisi",
+  "password": "123456",
+  "email": "lisi@spring.io",
+  "sex": "man",
+  "age": 18,
+  "status": "normal"
+}
+
+### user3
+POST http://localhost:10000/user
+Content-Type: application/json
+
+{
+  "username": "wangwu",
+  "password": "123456",
+  "email": "wangwu@spring.io",
+  "sex": "woman",
+  "age": 23,
+  "status": "error"
+}
+
+
+###
+PUT http://localhost:10000/user
+Content-Type: application/json
+
+{
+  "id": 3,
+  "username": "wangwu",
+  "password": "654321",
+  "email": "wangwu@spring.io",
+  "sex": "woman",
+  "age": 23,
+  "status": "normal"
+}
+
+###
+GET http://localhost:10000/user/1
+
+###
+DELETE http://localhost:10000/user/2
+
+###
+POST http://localhost:10000/truncateTable
+Content-Type: application/x-www-form-urlencoded
+
+tableName=user&truncate=true
+
+
+

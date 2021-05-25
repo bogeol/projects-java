@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.springbootmybatisreactjs.mapper.UserMapper">
+    <insert id="postUser"
+            parameterType="com.example.springbootmybatisreactjs.model.User"
+            useGeneratedKeys="true"
+            keyProperty="id">
+        insert into user(username, password, email, sex, age, status)
+        values (#{username},
+                #{password},
+                #{email},
+                #{sex},
+                #{age},
+                #{status})
+    </insert>
+    <update id="putUser">
+        update user
+        set username=#{username},
+            password=#{password},
+            email=#{email},
+            sex=#{sex},
+            age=#{age},
+            status=#{status}
+        where id = #{id}
+    </update>
+    <delete id="deleteUser">
+        delete
+        from user
+        where id = #{userId}
+    </delete>
+    <select id="getUser" resultType="com.example.springbootmybatisreactjs.model.User">
+        select *
+        from user
+        where id = #{userId}
+    </select>
+    <select id="getAllUser" resultType="com.example.springbootmybatisreactjs.model.User">
+        select *
+        from user
+    </select>
+    <update id="truncateTable">
+        truncate table ${tableName}
+    </update>
+</mapper>
