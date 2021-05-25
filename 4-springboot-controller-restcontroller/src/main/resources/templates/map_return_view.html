@@ -1,0 +1,21 @@
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>
+        map_return_view
+    </title>
+</head>
+<body>
+<h1>map_return_view</h1>
+
+<div>name: <span th:text="${name}"></span></div>
+
+<div>date: <span th:text="${date}"></span></div>
+
+<div>
+    randomNumbers:
+    <ul th:each="randomNumber : ${randomNumbers}">
+        <li th:text="${randomNumber}"></li>
+    </ul>
+</div>
+</body>
+</html>
