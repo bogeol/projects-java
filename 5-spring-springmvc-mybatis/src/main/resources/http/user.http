@@ -1,0 +1,16 @@
+###
+GET http://localhost:10000/maven_spring_springmvc_mybatis_war_exploded/user/test?name=admin
+
+###
+GET http://localhost:10000/maven_spring_springmvc_mybatis_war_exploded/user
+Content-Type: application/json
+
+###
+POST http://localhost:10000/maven_spring_springmvc_mybatis_war_exploded/user
+Content-Type: application/json
+
+{
+  "username": "zhangsan",
+  "password": "123456",
+  "email": "zhangsan@spring.io"
+}
