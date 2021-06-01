@@ -2,9 +2,9 @@
 
 > Stream将要处理的元素集合（数组 / 集合）看作一种流，在流的过程中，借助Stream API对流中的元素进行操作，比如：筛选、排序、聚合等。
 
-- 终止操作
+- 终止操作【termianl operations】
     - 每个流进行到终止操作即结束【返回值或者集合】
-- 中间操作
+- 中间操作【intermediate operations】
     - 中间层，可以多次操作【返回流】
 
 ## 使用
@@ -22,13 +22,13 @@ stream VS parallelStream：
 Optional：
 可以为null的容器对象【isPresent判断是否存在】【get返回对象】
 
-终止操作：【END => RETURN】
+终止操作：【END => RETURN】【termianl operations】
 - forEach【遍历】
 - find / match【匹配】
 - reduce【规约】（把一个流设置规约缩减成一个值）
 - max / min / count【聚合】
 
-中间操作：【RETURN STREAM => CONTINUE】
+中间操作：【RETURN STREAM => CONTINUE】【intermediate operations】
 - filter【过滤】
 - map【映射】
 - sorted【排序】
