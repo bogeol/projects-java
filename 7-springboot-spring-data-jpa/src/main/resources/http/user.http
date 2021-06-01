@@ -1,0 +1,22 @@
+###
+GET http://localhost:54111
+
+###
+GET http://localhost:54111/user
+
+###
+GET http://localhost:54111/user?pageNumber=2&pageSize=2
+
+###
+POST http://localhost:54111/user
+Content-Type: application/json
+
+{
+  "username": "97defa56",
+  "password": "19dd21ca",
+  "email": "a07051cb",
+  "sex": "85abefb9",
+  "age": 5,
+  "status": "normal"
+}
+
