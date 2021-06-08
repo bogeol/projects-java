@@ -1,0 +1,57 @@
+###
+DELETE http://localhost:8080/file_model/index
+
+###
+POST http://localhost:8080/file_model/index
+
+###
+POST http://localhost:8080/file_model/mock
+
+###
+GET http://localhost:8080/file_model/id
+Content-Type: application/json
+
+{
+  "id": "usr_01.txt"
+}
+
+###
+GET http://localhost:8080/file_model/fileName
+Content-Type: application/json
+
+{
+  "fileName": "help.txt"
+}
+
+###
+GET http://localhost:8080/file_model/fileSize
+Content-Type: application/json
+
+{
+  "min": 90000,
+  "max": 100000
+}
+
+###
+GET http://localhost:8080/file_model/fileType
+Content-Type: application/json
+
+{
+  "fileType": "txt"
+}
+
+###
+GET http://localhost:8080/file_model/findWithMutiFieldAndFuzzy
+Content-Type: application/json
+
+{
+  "text": "haraka"
+}
+
+###
+GET http://localhost:8080/file_model/findWithWildCardQuery
+Content-Type: application/json
+
+{
+  "text": "usr"
+}
