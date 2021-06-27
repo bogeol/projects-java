@@ -10,3 +10,4 @@
 010. springboot spring data elasticsearch [ElasticsearchRepository / ElasticsearchRestTemplate] [TODO] [UPDATING]
 011. springboot multi datasources [JDBC / spring-jdbc / JPA / Mybatis]
 012. springboot jdbc VS spring-jdbc [TODO]
+013. springboot lucene v1 [spring + lucene] [ref-009]

@@ -39,3 +39,5 @@
 009-springboot-lucene/src/main/resources/lucene/index
 009-springboot-lucene/src/main/resources/application-dev.properties
 010-springboot-elasticsearch-spring-data-elasticsearch/src/main/resources/files
+013-springboot-lucene-v1/src/main/resources/lucene/files
+013-springboot-lucene-v1/src/main/resources/lucene/index
