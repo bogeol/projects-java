@@ -41,3 +41,4 @@
 010-springboot-elasticsearch-spring-data-elasticsearch/src/main/resources/files
 013-springboot-lucene-v1/src/main/resources/lucene/files
 013-springboot-lucene-v1/src/main/resources/lucene/index
+014-springboot-kafka/src/main/resources/data/MOCK_DATA.json

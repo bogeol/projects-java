@@ -1,0 +1,18 @@
+# link: https://segmentfault.com/a/1190000021746086
+version: '3.7'
+services:
+  zookeeper:
+    image: wurstmeister/zookeeper:latest
+    ports:
+      - 2182:2181 # 2182为外部端口
+  kafka:
+    image: wurstmeister/kafka:latest
+    ports:
+      - 9092:9092
+    environment:
+      KAFKA_BROKER_ID: 0
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://192.168.150.132:9092 # change to host ip
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_LISTENERS: PLAINTEXT://0.0.0.0:9092
+    depends_on:
+      - zookeeper
