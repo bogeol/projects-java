@@ -8,3 +8,4 @@
 008. springboot spring data jdbc [JdbcTemplate] [TODO]
 009. springboot lucene [write / read(search) index] [TODO]
 010. springboot spring data elasticsearch [ElasticsearchRepository / ElasticsearchRestTemplate] [TODO] [UPDATING]
+011. springboot multi datasources [JDBC / spring-jdbc / JPA / Mybatis]

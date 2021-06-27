@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.springbootmultidatasources.dao.secondary.mapper.UserMapper">
+    <update id="saveAll" useGeneratedKeys="true">
+        insert into user(username, password, status)
+        values
+        <foreach collection="userList" item="user" separator=",">
+            (
+            #{user.username},
+            #{user.password},
+            #{user.status}
+            )
+        </foreach>
+    </update>
+    <update id="truncateTableUser">
+        truncate table user
+    </update>
+    <select id="findAll" resultType="com.example.springbootmultidatasources.model.secondary.User">
+        select *
+        from user
+    </select>
+    <select id="findUsersByStatus" resultType="com.example.springbootmultidatasources.model.secondary.User">
+        select *
+        from user
+        where status = #{status}
+    </select>
+</mapper>
